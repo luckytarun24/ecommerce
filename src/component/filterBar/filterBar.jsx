@@ -16,6 +16,7 @@ const FilterBar = ({ low, high, total, show, handleSortBy, handleShow }) => {
     <Box
       sx={{
         display: "flex",
+        flexDirection: { xs: "column", md: "row" },
         justifyContent: "space-around",
         backgroundColor: "#F9F1E7",
         alignItems: "center",

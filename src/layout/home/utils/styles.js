@@ -4,7 +4,8 @@ const styles = {
   },
   imageOption: {
     display: "flex",
-    flexDirection: "row",
+    flexDirection: { xs: "column", md: "row" },
+    alignItems: "center",
     justifyContent: "space-around",
     padding: "40px",
   },
