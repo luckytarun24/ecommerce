@@ -7,7 +7,7 @@ import { Box, TextField, Typography } from "@mui/material";
 import { EMAIL, emailRegex } from "../../../utils/constants";
 
 //billingFromStyles
-import { billingFromStyles } from "../utils";
+import { billingFromStyles, styles } from "../utils";
 
 const BillingFrom = () => {
   //States
@@ -34,7 +34,7 @@ const BillingFrom = () => {
     console.log(data);
   };
   return (
-    <Box id="BillingFrom" sx={{ width: "50%" }}>
+    <Box id="BillingFrom" sx={styles.box}>
       <form style={billingFromStyles.from} onSubmit={handleSubmit(onSubmit)}>
         <Typography variant="h5">Billing Details</Typography>
         <Controller
