@@ -2,13 +2,14 @@ const styles = {
   box: {
     display: "flex",
     justifyContent: "space-between",
-    margin: "60px 10%",
+    flexDirection: { xs: "column", md: "row" },
+    margin: { xs: "20px", md: "60px 10%" },
   },
 };
 
 const cartCardStyle = {
   main: {
-    width: "25%",
+    width: { xs: "initial", md: "25%" },
     padding: "10px",
     paddingBottom: "40px",
     display: "flex",
@@ -39,7 +40,11 @@ const cartCardStyle = {
 };
 
 const cartTableStyle = {
-  container: { width: "70%", maxHeight: "480px", overflow: "auto" },
+  container: {
+    width: { xs: "100%", md: "70%" },
+    maxHeight: { md: "480px" },
+    overflow: { md: "auto" },
+  },
   header: { backgroundColor: "#F9F1E7", border: "none" },
   imageCell: {
     border: "none",

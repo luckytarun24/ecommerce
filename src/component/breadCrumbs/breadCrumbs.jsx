@@ -15,7 +15,7 @@ const GetBreadcrumbs = ({ separator }) => {
     <Breadcrumbs separator={separator || "/"} aria-label="breadcrumb">
       {pathSegments.map((path, index) => (
         <Link key={index} to={`/home`} style={styles.item}>
-          {routesNameByPath[`/${path}`]}
+          {routesNameByPath[`/${path}`]?routesNameByPath[`/${path}`]:path}
         </Link>
       ))}
     </Breadcrumbs>
