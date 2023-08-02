@@ -58,7 +58,7 @@ const data = [
     description:
       "Minim consequat esse dolore sint. Voluptate eu Lorem ullamco eu minim pariatur. Dolore non reprehenderit proident quis aute enim ut sunt fugiat. Labore esse ut veniam id ex proident deserunt tempor sit ad esse.",
     image:
-      "https://images.unsplash.com/photo-1609347993146-2a0638758bcc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1609347993146-2a0638758bcc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "kabita Darlami",
@@ -82,7 +82,7 @@ const data = [
     description:
       "Minim consequat esse dolore sint. Voluptate eu Lorem ullamco eu minim pariatur. Dolore non reprehenderit proident quis aute enim ut sunt fugiat. Labore esse ut veniam id ex proident deserunt tempor sit ad esse.",
     image:
-      "https://images.unsplash.com/photo-1555009393-39be6ef89604?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1555009393-39be6ef89604?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "kabita Darlami",
@@ -94,7 +94,7 @@ const data = [
     description:
       "Minim consequat esse dolore sint. Voluptate eu Lorem ullamco eu minim pariatur. Dolore non reprehenderit proident quis aute enim ut sunt fugiat. Labore esse ut veniam id ex proident deserunt tempor sit ad esse.",
     image:
-      "https://images.unsplash.com/photo-1560796819-89ab1929cdd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1560796819-89ab1929cdd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "kabita Darlami",
@@ -106,7 +106,7 @@ const data = [
     description:
       "Minim consequat esse dolore sint. Voluptate eu Lorem ullamco eu minim pariatur. Dolore non reprehenderit proident quis aute enim ut sunt fugiat. Labore esse ut veniam id ex proident deserunt tempor sit ad esse.",
     image:
-      "https://images.unsplash.com/photo-1543854704-2b1b011701e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1543854704-2b1b011701e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "kabita Darlami",
@@ -118,7 +118,7 @@ const data = [
     description:
       "Minim consequat esse dolore sint. Voluptate eu Lorem ullamco eu minim pariatur. Dolore non reprehenderit proident quis aute enim ut sunt fugiat. Labore esse ut veniam id ex proident deserunt tempor sit ad esse.",
     image:
-      "https://images.unsplash.com/photo-1601057956918-acb8d894b1cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1601057956918-acb8d894b1cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "kabita Darlami",
@@ -130,7 +130,7 @@ const data = [
     description:
       "Minim consequat esse dolore sint. Voluptate eu Lorem ullamco eu minim pariatur. Dolore non reprehenderit proident quis aute enim ut sunt fugiat. Labore esse ut veniam id ex proident deserunt tempor sit ad esse.",
     image:
-      "https://images.unsplash.com/photo-1602008969851-05d604b0a450?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1602008969851-05d604b0a450?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "kabita Darlami",
@@ -166,7 +166,7 @@ const data = [
     description:
       "Minim consequat esse dolore sint. Voluptate eu Lorem ullamco eu minim pariatur. Dolore non reprehenderit proident quis aute enim ut sunt fugiat. Labore esse ut veniam id ex proident deserunt tempor sit ad esse.",
     image:
-      "https://images.unsplash.com/photo-1631044237696-6b38064fbbf4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1631044237696-6b38064fbbf4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 
   //women
@@ -179,7 +179,7 @@ const data = [
     description:
       "Id tempor enim anim aute nulla. Ad ex laborum aliquip dolor officia cillum magna minim in. Laboris laborum aute voluptate cupidatat nulla exercitation et adipisicing proident in exercitation laboris labore esse. Exercitation in qui eu labore culpa minim ipsum exercitation consequat laboris dolore. Tempor ipsum consequat ut ut excepteur eu consequat voluptate proident ea. Do nulla Lorem aliqua adipisicing tempor id aute aute.",
     image:
-      "https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Nassim Boughazi",
@@ -201,7 +201,7 @@ const data = [
     description:
       "Id tempor enim anim aute nulla. Ad ex laborum aliquip dolor officia cillum magna minim in. Laboris laborum aute voluptate cupidatat nulla exercitation et adipisicing proident in exercitation laboris labore esse. Exercitation in qui eu labore culpa minim ipsum exercitation consequat laboris dolore. Tempor ipsum consequat ut ut excepteur eu consequat voluptate proident ea. Do nulla Lorem aliqua adipisicing tempor id aute aute.",
     image:
-      "https://images.unsplash.com/photo-1589203832113-de9d078abc30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1589203832113-de9d078abc30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Nassim Boughazi",
@@ -212,7 +212,7 @@ const data = [
     description:
       "Id tempor enim anim aute nulla. Ad ex laborum aliquip dolor officia cillum magna minim in. Laboris laborum aute voluptate cupidatat nulla exercitation et adipisicing proident in exercitation laboris labore esse. Exercitation in qui eu labore culpa minim ipsum exercitation consequat laboris dolore. Tempor ipsum consequat ut ut excepteur eu consequat voluptate proident ea. Do nulla Lorem aliqua adipisicing tempor id aute aute.",
     image:
-      "https://images.unsplash.com/photo-1636421731517-a411b4b540c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1636421731517-a411b4b540c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Nassim Boughazi",
@@ -245,7 +245,7 @@ const data = [
     description:
       "Id tempor enim anim aute nulla. Ad ex laborum aliquip dolor officia cillum magna minim in. Laboris laborum aute voluptate cupidatat nulla exercitation et adipisicing proident in exercitation laboris labore esse. Exercitation in qui eu labore culpa minim ipsum exercitation consequat laboris dolore. Tempor ipsum consequat ut ut excepteur eu consequat voluptate proident ea. Do nulla Lorem aliqua adipisicing tempor id aute aute.",
     image:
-      "https://images.unsplash.com/photo-1600544395530-69b40d0483ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1600544395530-69b40d0483ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Nassim Boughazi",
@@ -256,7 +256,7 @@ const data = [
     description:
       "Id tempor enim anim aute nulla. Ad ex laborum aliquip dolor officia cillum magna minim in. Laboris laborum aute voluptate cupidatat nulla exercitation et adipisicing proident in exercitation laboris labore esse. Exercitation in qui eu labore culpa minim ipsum exercitation consequat laboris dolore. Tempor ipsum consequat ut ut excepteur eu consequat voluptate proident ea. Do nulla Lorem aliqua adipisicing tempor id aute aute.",
     image:
-      "https://images.unsplash.com/photo-1677548786559-78e90939c668?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1677548786559-78e90939c668?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Nassim Boughazi",
@@ -267,7 +267,7 @@ const data = [
     description:
       "Id tempor enim anim aute nulla. Ad ex laborum aliquip dolor officia cillum magna minim in. Laboris laborum aute voluptate cupidatat nulla exercitation et adipisicing proident in exercitation laboris labore esse. Exercitation in qui eu labore culpa minim ipsum exercitation consequat laboris dolore. Tempor ipsum consequat ut ut excepteur eu consequat voluptate proident ea. Do nulla Lorem aliqua adipisicing tempor id aute aute.",
     image:
-      "https://images.unsplash.com/photo-1614940685083-c5409b57da6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1614940685083-c5409b57da6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Nassim Boughazi",
@@ -289,7 +289,7 @@ const data = [
     description:
       "Id tempor enim anim aute nulla. Ad ex laborum aliquip dolor officia cillum magna minim in. Laboris laborum aute voluptate cupidatat nulla exercitation et adipisicing proident in exercitation laboris labore esse. Exercitation in qui eu labore culpa minim ipsum exercitation consequat laboris dolore. Tempor ipsum consequat ut ut excepteur eu consequat voluptate proident ea. Do nulla Lorem aliqua adipisicing tempor id aute aute.",
     image:
-      "https://images.unsplash.com/photo-1541216970279-affbfdd55aa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1541216970279-affbfdd55aa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Nassim Boughazi",
@@ -300,7 +300,7 @@ const data = [
     description:
       "Id tempor enim anim aute nulla. Ad ex laborum aliquip dolor officia cillum magna minim in. Laboris laborum aute voluptate cupidatat nulla exercitation et adipisicing proident in exercitation laboris labore esse. Exercitation in qui eu labore culpa minim ipsum exercitation consequat laboris dolore. Tempor ipsum consequat ut ut excepteur eu consequat voluptate proident ea. Do nulla Lorem aliqua adipisicing tempor id aute aute.",
     image:
-      "https://images.unsplash.com/photo-1571908599407-cdb918ed83bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1571908599407-cdb918ed83bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Nassim Boughazi",
@@ -335,7 +335,7 @@ const data = [
     description:
       "Minim aliquip ex id dolore officia voluptate sint. Sunt enim irure minim fugiat velit. Officia pariatur commodo incididunt Lorem mollit quis nulla culpa cupidatat nisi excepteur esse esse velit. Ut labore elit qui fugiat non incididunt consequat aute pariatur non cillum qui nostrud amet. Sunt exercitation nisi aliquip velit elit dolore ad. Laboris non Lorem voluptate sit.",
     image:
-      "https://images.unsplash.com/photo-1617114919297-3c8ddb01f599?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1617114919297-3c8ddb01f599?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Bas Peperzak",
@@ -357,7 +357,7 @@ const data = [
     description:
       "Reprehenderit laboris officia commodo nostrud occaecat sint Lorem. Sit duis commodo labore officia ex culpa reprehenderit nulla anim sit irure mollit fugiat minim. Non aliqua consequat dolore eu aute ea duis ea velit mollit in tempor officia sunt. Do laboris pariatur proident duis esse veniam magna elit eu culpa incididunt. Id aute reprehenderit reprehenderit in culpa duis quis. Id aliqua nulla sint tempor est aliqua elit fugiat eu aliquip et officia. Minim labore fugiat et exercitation deserunt nisi exercitation reprehenderit Lorem consequat mollit fugiat Lorem.",
     image:
-      "https://images.unsplash.com/photo-1623629225725-23a723fd5bd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1623629225725-23a723fd5bd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Bas Peperzak",
@@ -368,7 +368,7 @@ const data = [
     description:
       "Irure eiusmod et laboris tempor minim sit quis esse incididunt. Aliquip consequat culpa veniam irure ullamco aliquip aliqua eu. Culpa officia veniam sint eu ea. Dolore commodo voluptate id exercitation exercitation nostrud fugiat amet nostrud qui culpa enim ad. In deserunt nisi magna nulla duis ullamco amet exercitation laborum nisi adipisicing.",
     image:
-      "https://images.unsplash.com/photo-1564859228273-274232fdb516?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1564859228273-274232fdb516?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Bas Peperzak",
@@ -379,7 +379,7 @@ const data = [
     description:
       "Mollit adipisicing commodo aliquip cupidatat cillum. Laboris quis proident dolor pariatur ipsum non eu ullamco ad occaecat dolore ullamco. Nisi adipisicing sint tempor minim cillum dolore ex minim. Ullamco ut ipsum velit exercitation nulla aliquip ut amet sint exercitation elit esse do ad. Ad non ex ad officia ut amet sit nulla quis reprehenderit incididunt laboris anim consectetur.",
     image:
-      "https://images.unsplash.com/photo-1604695573706-53170668f6a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1604695573706-53170668f6a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Bas Peperzak",
@@ -401,7 +401,7 @@ const data = [
     description:
       "Culpa aliqua consectetur amet fugiat commodo nulla sint culpa. Consequat do nostrud veniam eiusmod aliqua cillum do adipisicing aliquip ipsum laboris occaecat nostrud pariatur. Cupidatat aute tempor excepteur sunt aute magna officia ipsum sint in. Dolor incididunt sint Lorem magna anim est ipsum et laboris sint occaecat. Dolor veniam anim incididunt reprehenderit qui ex do ea. Sint veniam tempor qui commodo voluptate esse id laboris voluptate.",
     image:
-      "https://images.unsplash.com/photo-1593757147298-e064ed1419e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1593757147298-e064ed1419e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Bas Peperzak",
@@ -434,7 +434,7 @@ const data = [
     description:
       "Nulla exercitation qui eu nulla ut. Qui quis Lorem non excepteur voluptate. Pariatur amet anim ex deserunt eiusmod. Dolor pariatur quis minim do nulla irure amet ipsum cupidatat amet magna.",
     image:
-      "https://images.unsplash.com/photo-1619208382871-96f4d45bc840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1619208382871-96f4d45bc840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Bas Peperzak",
@@ -445,7 +445,7 @@ const data = [
     description:
       "In in occaecat ad enim in fugiat ad deserunt voluptate. Voluptate labore amet enim culpa minim eiusmod esse adipisicing nostrud esse esse commodo et reprehenderit. In mollit minim fugiat laborum non minim elit in aliqua ex. Mollit laboris minim veniam est laborum magna sint fugiat in dolore officia commodo incididunt consequat. Dolor anim incididunt nulla officia dolor et voluptate fugiat anim quis cillum ex ad exercitation.",
     image:
-      "https://images.unsplash.com/photo-1617952125960-38d76f3659d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1617952125960-38d76f3659d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 

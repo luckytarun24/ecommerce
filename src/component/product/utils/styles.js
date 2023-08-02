@@ -1,16 +1,14 @@
 const styles = {
-  box: {
-    display: "flex",
-    margin: "10px 0",
-  },
   buttonBox: {
     display: "flex",
     gap: "30px",
   },
   container: {
     display: "flex",
+    flexDirection: { xs: "column", md: "row" },
     justifyContent: "center",
-    gap: 30,
+    gap: "30px",
+    margin: "10px",
   },
 
   content: {
@@ -54,11 +52,13 @@ const styles = {
   },
 
   contentBox: {
-    width: "45%",
+    width: { xs: "100%", md: "45%" },
     display: "flex",
     flexDirection: "column",
   },
-
+  box: {
+    display: "flex",
+  },
   subContent: {
     display: "flex",
     flexDirection: "column",
