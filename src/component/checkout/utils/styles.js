@@ -2,14 +2,16 @@ const styles = {
   box: {
     display: "flex",
     justifyContent: "space-between",
-    margin: "60px 10%",
+    flexDirection: { xs: "column", md: "row" },
+    margin: { xs: "20px", md: "60px 10%" },
   },
 };
 
 const billingFromStyles = {
+  box: { width: { xs: "initial", md: "50%" } },
   inputField: {
     margin: "10px 0",
-    width: "80%",
+    width: { xs: "100%", md: "80%" },
   },
 
   title: {
@@ -44,7 +46,7 @@ const billingTable = {
     border: "none",
   },
   main: {
-    width: "40%",
+    width: { xs: "initial", md: "40%" },
     padding: "10px",
     paddingBottom: "40px",
     display: "flex",

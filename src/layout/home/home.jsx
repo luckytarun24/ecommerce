@@ -1,4 +1,4 @@
-import { CardMedia, Typography } from "@mui/material";
+import { Box, CardMedia, Typography } from "@mui/material";
 import { useSelector } from "react-redux";
 
 //Components
@@ -28,18 +28,18 @@ const Home = () => {
   ];
   const navigation = useNavigate();
   return (
-    <div id="home">
+    <Box id="home">
       <CarouselComponent />
-      <div id="shop-options" style={styles.shopOptions}>
+      <Box id="shop-options" sx={styles.shopOptions}>
         <Typography align="center" variant="h4">
           {SHOP_RANGE}
         </Typography>
         <Typography align="center" variant="subtitle1">
           {SHOP_RANGE_SUBTITLE}
         </Typography>
-        <div style={styles.imageOption}>
+        <Box sx={styles.imageOption}>
           {image.map((item, index) => (
-            <div key={index}>
+            <Box key={index}>
               <CardMedia
                 sx={styles.imageOptionElement}
                 image={item.image}
@@ -55,16 +55,16 @@ const Home = () => {
                 {" "}
                 {item.title}
               </Typography>
-            </div>
+            </Box>
           ))}
-        </div>
-      </div>
-      <div id="product">
+        </Box>
+      </Box>
+      <Box id="product">
         <Typography variant="h2" textAlign={"center"} sx={{ padding: 2 }}>
           Products
         </Typography>
-        <div
-          style={{
+        <Box
+          sx={{
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-around",
@@ -82,9 +82,9 @@ const Home = () => {
               subTitle={item.subTitle}
             />
           ))}
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 

@@ -50,7 +50,7 @@ const ImageListComponent = ({ imageList }) => {
 
   return (
     <ImageList
-      sx={{ width: 500, height: "fit-content" }}
+      sx={{ width: { xs: "100%", md: 500 }, height: "fit-content" }}
       variant="quilted"
       cols={5}
       gap={25}

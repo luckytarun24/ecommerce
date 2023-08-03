@@ -28,15 +28,19 @@ const CommitFooter = () => {
     <Box
       sx={{
         display: "flex",
+        alignItems: "center",
         justifyContent: "space-evenly",
-        padding: "80px 40px",
-
+        padding: { xs: "auto", md: "80px 40px" },
+        flexDirection: { xs: "column", md: "row" },
         backgroundColor: "#FAF3EA",
       }}
       className={"CommitFooter"}
     >
       {commit.map((item, index) => (
-        <Box sx={{ display: "flex", gap: 2 }} key={index}>
+        <Box
+          sx={{ display: "flex", gap: 2, padding: { xs: "20px", md: "auto" } }}
+          key={index}
+        >
           {" "}
           <CardMedia
             sx={{ width: "61px", height: "62px" }}
