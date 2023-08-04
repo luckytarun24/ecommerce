@@ -1,14 +1,19 @@
 import { Controller, useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 //Components
 import { Button, TextField, Typography } from "@mui/material";
 
 //Constants
-import { emailRegex, EMAIL, WELCOME, ROUTES } from "../../utils/constants";
+import { emailRegex, WELCOME, ROUTES } from "../../utils/constants";
 
 //Styles
 import styles from "./utils/styles";
+
+//Reducers
+import { setSnackBar } from "../../reducers/snackBar/snackBar.js";
+import { loginReducer } from "../../reducers/user/userSlice.js";
 
 const LoginFrom = () => {
   const {
@@ -17,16 +22,28 @@ const LoginFrom = () => {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      email: "",
+      id: "",
       password: "",
     },
   });
+  
   //Helpers
   const navigation = useNavigate();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    navigation(`${ROUTES.HOME}`);
+  const dispatch = useDispatch();
+
+  const onSubmit = async (data) => {
+    try {
+      
+      dispatch(loginReducer(data));
+
+      dispatch(setSnackBar({ message: "login successfully" }));
+      navigation(`${ROUTES.HOME}`);
+    } catch (error) {
+      dispatch(
+        setSnackBar({ message: error.response.data.error, severity: "error" })
+      );
+    }
   };
   return (
     <div id="loginFrom">
@@ -35,20 +52,20 @@ const LoginFrom = () => {
           {WELCOME}
         </Typography>
         <Controller
-          name={EMAIL}
-          id={EMAIL}
+          name={"id"}
+          id={"id"}
           control={control}
           rules={{
-            required: "Email is required",
+            required: "Email/Mobile No is required",
             pattern: {
               value: emailRegex,
-              message: "Please enter a valid email",
+              message: "Please enter a valid Email/Mobile No",
             },
           }}
           render={({ field }) => (
             <TextField
               sx={styles.inputField}
-              placeholder="Email"
+              placeholder="Email/Mobile No"
               variant="standard"
               error={errors.email}
               helperText={errors.email?.message}

@@ -1,13 +1,17 @@
 import Router from "./routes";
 
+//Component
+import { Snackbar } from "./component";
+import Loading from "./utils/loading";
+
 //Styles
 import "./App.css";
-import { Snackbar } from "./component";
 
 const App = () => {
   return (
     <>
       <Snackbar />
+      <Loading />
       <Router />
     </>
   );

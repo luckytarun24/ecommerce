@@ -4,12 +4,19 @@ import { Controller, useForm } from "react-hook-form";
 import { Button, TextField, Typography } from "@mui/material";
 
 //Constants
-import { emailRegex, EMAIL } from "../../utils/constants";
+import { emailRegex } from "../../utils/constants";
 import { mobileNoRegex } from "./utils";
 
 //Styles
 import { styles } from "./utils";
 import { Link } from "react-router-dom";
+
+//Reducers
+import { setSnackBar } from "../../reducers/snackBar/snackBar";
+
+//Services
+import signUp from "../../services/auth/signUp.js";
+import { useDispatch } from "react-redux";
 
 const SignInFrom = () => {
   //States
@@ -27,9 +34,17 @@ const SignInFrom = () => {
   });
 
   //Helpers
-  const onSubmit = (data) => {
-    console.log(data);
+  const dispatch = useDispatch();
+
+  const onSubmit = async (data) => {
+    try {
+      await signUp(data);
+      dispatch(setSnackBar({ message: "User Create successfully" }));
+    } catch (error) {
+      dispatch(setSnackBar({ message: "try again", severity: "error" }));
+    }
   };
+
   return (
     <div id="SignInFrom">
       <form style={styles.from} onSubmit={handleSubmit(onSubmit)}>
@@ -55,8 +70,8 @@ const SignInFrom = () => {
           )}
         />
         <Controller
-          name={EMAIL}
-          id={EMAIL}
+          name={"email"}
+          id={"email"}
           control={control}
           rules={{
             required: "Email is required",

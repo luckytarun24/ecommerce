@@ -1,10 +1,27 @@
-import { createSlice } from "@reduxjs/toolkit";
-import data from "../../utils/data";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-const initialState = data.map((product, index) => ({
-  ...product,
-  id: index + 1,
-}));
+//Services
+import { getProducts } from "../../services/product/get";
+
+//Reducer
+import { setLoading, unsetLoading } from "../loading/loadingSlice";
+
+const initialState = [];
+
+export const getProductsReducer = createAsyncThunk(
+  "GET/products",
+  async (_, { dispatch }) => {
+    try {
+      dispatch(setLoading());
+      const result = await getProducts();
+      dispatch(unsetLoading());
+      return result.data;
+    } catch (error) {
+      dispatch(unsetLoading());
+      return [];
+    }
+  }
+);
 
 const productDetailsSlice = createSlice({
   name: "productDetails",
@@ -13,6 +30,11 @@ const productDetailsSlice = createSlice({
     add: (state) => {
       console.log(state);
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(getProductsReducer.fulfilled, (state, { payload }) => {
+      state.push(...payload);
+    });
   },
 });
 

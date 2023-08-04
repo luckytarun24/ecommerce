@@ -18,10 +18,10 @@ import { faHeart } from "@fortawesome/free-regular-svg-icons";
 
 //Reducers
 import { addToCart } from "../../reducers/cart/cartSlice";
+import { setSnackBar } from "../../reducers/snackBar/snackBar";
 
 //Styles
 import { styles } from "./utils";
-import { setSnackBar } from "../../reducers/snackBar/snackBar";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../utils/constants";
 

@@ -1,9 +1,21 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
+//Services
+import { getCart } from "../../services/cart/get";
 
 const initialState = {
   cart: [],
   total: 0,
 };
+
+export const getCartReducer = createAsyncThunk("GET/cart", async () => {
+  try {
+    const result = await getCart();
+    return result;
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 const cartSlice = createSlice({
   name: "cartDetails",
@@ -60,6 +72,11 @@ const cartSlice = createSlice({
       const index = state.cart.findIndex((product) => product.id === id);
       state.cart.splice(index, 1);
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(getCartReducer.fulfilled, (state, { payload }) => {
+      return { ...payload[0] };
+    });
   },
 });
 

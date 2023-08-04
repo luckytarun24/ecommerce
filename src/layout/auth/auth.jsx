@@ -1,4 +1,5 @@
-import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 
 //Components
@@ -10,10 +11,26 @@ import { loginImage, siginInImage } from "../../assets";
 //Styles
 import { styles } from "./utils";
 
+//Helpers
+import { getItem } from "../../utils/localStorage";
+import { ROUTES } from "../../utils/constants";
+
 const Auth = () => {
   //States
   const { pathname } = useLocation();
 
+
+  //Helpers
+  const navigation = useNavigate();
+
+  //Callback
+  useEffect(() => {
+    const token = getItem("token");
+    if (token) {
+      navigation(`${ROUTES.HOME}`)
+    }
+  }, []);
+  
   return (
     <Box id="auth" sx={styles.auth}>
       <Paper sx={styles.paper} elevation={8}>

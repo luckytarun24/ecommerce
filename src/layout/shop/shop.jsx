@@ -24,9 +24,11 @@ const Shop = () => {
   const high = Number(low) + Number(noOfElement);
 
   //helpers
+
   const handlePageChange = (_, value) => {
     setCurrentPage(value);
   };
+
   const handleSortBy = (query) => {
     const sortBy = query.target.value;
     const sortProduct = [...filterProduct];
