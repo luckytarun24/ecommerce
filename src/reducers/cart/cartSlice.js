@@ -12,7 +12,8 @@ const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const { id, title, price, image, count } = action.payload;
-      state.total += price * (count ? count : 1);
+
+      state.total = +(state.total + price * (count ? count : 1)).toFixed(2);
 
       const isExist = state.cart.find((data) => data.id === id);
       if (isExist) {
@@ -38,7 +39,10 @@ const cartSlice = createSlice({
       const isExist = state.cart.filter((data) => data.id === id)[0];
 
       if (isExist) {
-        state.total += isExist.price * (count ? count : 1);
+        state.total = +(
+          state.total +
+          isExist.price * (count ? count : 1)
+        ).toFixed(2);
 
         state.cart.map((data) => {
           if (data.id === id) {
@@ -51,6 +55,8 @@ const cartSlice = createSlice({
     },
     removeFromCart: (state, action) => {
       const { id } = action.payload;
+      const cart = state.cart.filter((data) => data.id === id)[0];
+      state.total = +(state.total - cart.price * cart.count).toFixed(2);
       const index = state.cart.findIndex((product) => product.id === id);
       state.cart.splice(index, 1);
     },
@@ -58,6 +64,6 @@ const cartSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { addToCart, removeFromCart,addCountCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, addCountCart } = cartSlice.actions;
 
 export default cartSlice.reducer;
