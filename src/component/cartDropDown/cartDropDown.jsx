@@ -5,12 +5,18 @@ import { Backdrop, Button, Divider, Paper, Typography } from "@mui/material";
 import CartElement from "./cartDropDownELement";
 
 //Styles
-import { styles } from "./utils";
+import { ActionOptions, styles } from "./utils";
+
+//COnstants
+import { useNavigate } from "react-router-dom";
 
 const Cart = ({ handleClose }) => {
   //States
   const cartList = useSelector((state) => state.carts.cart);
   const total = useSelector((state) => state.carts.total);
+
+  //Helpers
+  const navigate = useNavigate();
 
   return (
     <Backdrop open={true} onClick={handleClose}>
@@ -43,12 +49,16 @@ const Cart = ({ handleClose }) => {
           </div>
           <Divider />
           <div className="action" style={styles.action}>
-            {["Cart", "Checkout", "comparison"].map((name) => (
+            {ActionOptions.map(({ name, path }) => (
               <Button
                 size="small"
                 sx={styles.actionButton}
                 key={name}
                 variant="outlined"
+                onClick={() => {
+                  handleClose();
+                  path && navigate(path);
+                }}
               >
                 {name}
               </Button>

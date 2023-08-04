@@ -25,6 +25,7 @@ const ROUTES = {
   SHOP: "/shop",
   CART: "/cart",
   CONTACT: "/contact",
+  ABOUT: "/about",
   SIGN_UP: "/signup",
   WILD: "/",
   ALL: "/all",

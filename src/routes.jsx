@@ -24,7 +24,10 @@ const Router = () => {
       element: <MainLayout />,
       children: [
         { path: `${ROUTES.HOME}${ROUTES.WILD}`, element: <HomeLayout /> },
-        { path: `${ROUTES.HOME}${ROUTES.PRODUCT}/:productId`, element: <Product /> },
+        {
+          path: `${ROUTES.HOME}${ROUTES.PRODUCT}/:productId`,
+          element: <Product />,
+        },
         {
           path: `${ROUTES.HOME}${ROUTES.SHOP}/:category`,
           element: <ShopLayout />,
@@ -33,6 +36,7 @@ const Router = () => {
         { path: `${ROUTES.HOME}${ROUTES.CHECKOUT}`, element: <Checkout /> },
 
         { path: `${ROUTES.HOME}${ROUTES.CONTACT}`, element: <></> },
+        { path: `${ROUTES.HOME}${ROUTES.ABOUT}`, element: <></> },
       ],
     },
   ]);
