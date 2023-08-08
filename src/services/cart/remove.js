@@ -3,7 +3,7 @@ import instance from "../instance";
 const removeFromCart = (productId) =>
   instance({
     method: "PUT",
-    url: "/removeProductFromCart",
+    url: "/cart/removeProductFromCart",
     data: { productId },
   });
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 //Component
 import {
@@ -17,13 +18,17 @@ import { faRightLeft, faShareNodes } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 
 //Reducers
-import { addToCart } from "../../reducers/cart/cartSlice";
+import { setLoading, unsetLoading } from "../../reducers/loading/loadingSlice";
 import { setSnackBar } from "../../reducers/snackBar/snackBar";
 
 //Styles
 import { styles } from "./utils";
-import { useNavigate } from "react-router-dom";
+
+//Constants
 import { ROUTES } from "../../utils/constants";
+
+//Services
+import { addTCart } from "../../services/cart/add";
 
 const CardComponent = ({ title, subTitle, price, image, id }) => {
   //States
@@ -44,8 +49,10 @@ const CardComponent = ({ title, subTitle, price, image, id }) => {
           <Button
             variant="contained"
             style={styles.addToCart}
-            onClick={() => {
-              dispatch(addToCart({ id, title, price, image, count: 1 }));
+            onClick={async () => {
+              dispatch(setLoading());
+              await addTCart(id);
+              dispatch(unsetLoading());
               dispatch(setSnackBar({ message: "Product added successfully" }));
             }}
             component="div"

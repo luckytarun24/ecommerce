@@ -27,6 +27,8 @@ import { headerRightList } from "./utils";
 //Styles
 import styles from "./utils/styles";
 import { useNavigate } from "react-router-dom";
+import { logout } from "../../reducers/logout/logoutSlice";
+import { useDispatch } from "react-redux";
 
 const Header = () => {
   //States
@@ -38,6 +40,14 @@ const Header = () => {
   };
 
   //Helpers
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  headerRightList[4].onClick = () => {
+    dispatch(logout());
+    navigate("/");
+  };
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -53,7 +63,6 @@ const Header = () => {
     setAnchorElUser(null);
   };
 
-  const navigate = useNavigate();
   return (
     <AppBar
       id="header"
@@ -128,7 +137,7 @@ const Header = () => {
           >
             {headerMiddleList.map((page) => (
               <Button
-                key={page}
+                key={page.path}
                 onClick={() => navigate(page.path)}
                 // onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "#000", display: "block" }}

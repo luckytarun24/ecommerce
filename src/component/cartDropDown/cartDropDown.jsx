@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 //Component
 import { Backdrop, Button, Divider, Paper, Typography } from "@mui/material";
@@ -9,14 +9,24 @@ import { ActionOptions, styles } from "./utils";
 
 //COnstants
 import { useNavigate } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import { getCartReducer } from "../../reducers/cart/cartSlice";
 
 const Cart = ({ handleClose }) => {
   //States
-  const cartList = useSelector((state) => state.carts.cart);
-  const total = useSelector((state) => state.carts.total);
-
+  const { cart, total } = useSelector((state) => state.carts);
+  const ref = useRef(true);
   //Helpers
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  //Callbacks
+  useEffect(() => {
+    if (ref.current) {
+      ref.current = false;
+      dispatch(getCartReducer());
+    }
+  }, [ref]);
 
   return (
     <Backdrop open={true} onClick={handleClose}>
@@ -30,10 +40,10 @@ const Cart = ({ handleClose }) => {
         </div>
         <Divider />
         <div className="main" style={styles.main}>
-          {cartList.map(({ name, price, count, image, id }, index) => (
+          {cart.map(({ title, price, count, image, id }, index) => (
             <CartElement
               key={index}
-              name={name}
+              name={title}
               image={image}
               price={price}
               count={count}

@@ -74,8 +74,8 @@ const Home = () => {
         >
           {products.slice(0, 8).map((item) => (
             <CardComponent
-              key={item.id}
-              id={item.id}
+              key={item._id}
+              id={item._id}
               title={item.title}
               image={item.image}
               price={item.price}

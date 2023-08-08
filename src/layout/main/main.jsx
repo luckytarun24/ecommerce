@@ -23,7 +23,6 @@ const Main = () => {
     }
   }, []);
 
-  //callbacks
   useEffect(() => {
     if (products.length === 0) {
       dispatch(getProductsReducer());

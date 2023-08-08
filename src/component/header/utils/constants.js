@@ -1,5 +1,6 @@
 import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
 import {
+  faArrowRightFromBracket,
   faCartShopping,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
@@ -20,6 +21,10 @@ const headerRightList = [
   {
     name: "like",
     icon: faHeart,
+  },
+  {
+    name: "logout",
+    icon: faArrowRightFromBracket,
   },
 ];
 export { headerRightList };

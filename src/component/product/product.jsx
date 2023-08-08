@@ -12,11 +12,13 @@ import styles from "./utils/styles.js";
 import { addToCart } from "../../reducers/cart/cartSlice";
 import { setSnackBar } from "../../reducers/snackBar/snackBar";
 
+//Reducers
+import { getProductByIdReducer } from "../../reducers/singleProduct/singleProductSlice";
+
 const Product = () => {
   //States
-  const products = useSelector((state) => state.products);
+  const product = useSelector((state) => state.singleProduct.data);
   const [quantity, setQuantity] = useState(1);
-  const [product, setProduct] = useState({});
 
   //Helpers
   const dispatch = useDispatch();
@@ -24,11 +26,11 @@ const Product = () => {
 
   //Callback
   useEffect(() => {
-    if (productId && products) {
-      const result = products.filter((item) => item.id == productId);
-      result[0] && setProduct(result[0]);
+    if (productId) {
+      dispatch(getProductByIdReducer(productId));
     }
-  }, [productId, products]);
+  }, [productId]);
+
   return (
     <Box className="container" sx={styles.container}>
       <ImageList imageList={Array(5).fill(product.image)} />
@@ -46,7 +48,7 @@ const Product = () => {
           <Box sx={styles.rating}>
             <Rating
               size={"small"}
-              value={product.rating}
+              value={Number(product.rating)}
               precision={0.5}
               readOnly
             />

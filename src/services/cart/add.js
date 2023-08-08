@@ -3,8 +3,15 @@ import instance from "../instance";
 const addTCart = (productId) =>
   instance({
     method: "PUT",
-    url: "/addProductToCart",
+    url: "/cart/addProductToCart",
     data: { productId },
   });
 
-export { addTCart };
+const updateCountOfCartProduct = (data) =>
+  instance({
+    method: "PUT",
+    url: "/cart/updateByCount",
+    data: data,
+  });
+
+export { addTCart, updateCountOfCartProduct };

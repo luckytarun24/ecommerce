@@ -1,21 +1,24 @@
+import { useDispatch, useSelector } from "react-redux";
+
+//Components
 import { CardMedia, Typography } from "@mui/material";
-import { useDispatch } from "react-redux";
 
 //Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
-import { removeFromCart } from "../../reducers/cart/cartSlice";
-import { setSnackBar } from "../../reducers/snackBar/snackBar";
+
+//Reducers
+import { removeFromCartReducer } from "../../reducers/cart/cartSlice";
 
 const CartElement = ({ name, price, count, image, id }) => {
-  const dispatch = useDispatch();
+  //States
+  const products = useSelector((state) => state.products);
 
   //Helper
-  const handleRemove = () => {
-    dispatch(removeFromCart({ id }));
-    dispatch(
-      setSnackBar({ message: "Deleted successfully", severity: "error" })
-    );
+  const dispatch = useDispatch();
+ 
+  const handleRemove = async () => {
+    dispatch(removeFromCartReducer({ id, products }));
   };
   return (
     <div

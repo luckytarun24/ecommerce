@@ -1,9 +1,9 @@
 import instance from "../instance";
 
-const getCart = () =>
+const getCartProductsByUserId = () =>
   instance({
     method: "GET",
-    url: "/cart",
+    url: "/cart/products",
   });
 
-export { getCart };
+export { getCartProductsByUserId };

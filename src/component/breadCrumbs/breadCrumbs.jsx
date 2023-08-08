@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+
 //Components
 import { Breadcrumbs, CardMedia, Box, Typography } from "@mui/material";
 
@@ -10,12 +13,28 @@ import { styles } from "./utils";
 const GetBreadcrumbs = ({ separator }) => {
   const { pathname } = useLocation();
 
-  const pathSegments = pathname.split("/").filter((segment) => segment !== "");
+  //States
+  const product = useSelector((state) => state.singleProduct.data);
+  const [segment, setSegment] = useState([]);
+
+  //Callback
+  useEffect(() => {
+    const pathSegments = pathname
+      .split("/")
+      .filter((segment) => segment !== "");
+
+    if (`/${pathSegments[1]}` === ROUTES.PRODUCT) {
+      pathSegments[2] = product.title;
+    }
+
+    setSegment(pathSegments);
+  }, [product, pathname]);
+
   return (
     <Breadcrumbs separator={separator || "/"} aria-label="breadcrumb">
-      {pathSegments.map((path, index) => (
+      {segment.map((path, index) => (
         <Link key={index} to={`/home`} style={styles.item}>
-          {routesNameByPath[`/${path}`]?routesNameByPath[`/${path}`]:path}
+          {routesNameByPath[`/${path}`] ? routesNameByPath[`/${path}`] : path}
         </Link>
       ))}
     </Breadcrumbs>

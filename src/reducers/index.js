@@ -5,6 +5,7 @@ import { cartSlice } from "./cart";
 import { snackBarSlice } from "./snackBar";
 import { loadingSlice } from "./loading";
 import { userSlice } from "./user";
+import { singleProductDetailsSlice } from "./singleProduct";
 
 export default combineReducers({
   products: productDetailsSlice,
@@ -12,4 +13,5 @@ export default combineReducers({
   snackBar: snackBarSlice,
   loading: loadingSlice,
   user: userSlice,
+  singleProduct: singleProductDetailsSlice,
 });

@@ -13,16 +13,12 @@ import {
 
 //Styles
 import { billingTable } from "../utils";
-import { useSelector } from "react-redux";
 
-const CartCard = () => {
+const CartCard = ({ cart, total }) => {
   const columns = [
     { id: "Product", label: "Product", minWidth: 170 },
     { id: "Sub Total", align: "right", label: "Sub Total", minWidth: 100 },
   ];
-
-  //States
-  const { cart, total } = useSelector((state) => state.carts);
 
   return (
     <Paper elevation={0} sx={billingTable.main}>
@@ -45,7 +41,7 @@ const CartCard = () => {
             {cart.map((row) => (
               <TableRow key={row.name}>
                 <TableCell sx={billingTable.titleCell} scope="row">
-                  {row.name}
+                  {row.title}
                 </TableCell>
                 <TableCell sx={billingTable.cell} align="right">
                   {row.price}
@@ -69,7 +65,7 @@ const CartCard = () => {
         this website, to manage access to your account, and for other purposes
         described in our privacy policy.
       </Typography>
-      <Button variant="outlined" sx={billingTable.checkout}>
+      <Button variant="outlined" type={"submit"} sx={billingTable.checkout}>
         Place Order
       </Button>
     </Paper>

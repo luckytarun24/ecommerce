@@ -34,11 +34,10 @@ const LoginFrom = () => {
 
   const onSubmit = async (data) => {
     try {
-      
-      dispatch(loginReducer(data));
-
-      dispatch(setSnackBar({ message: "login successfully" }));
-      navigation(`${ROUTES.HOME}`);
+      dispatch(loginReducer(data)).then(() => {
+        dispatch(setSnackBar({ message: "login successfully" }));
+        navigation(`${ROUTES.HOME}`);
+      });
     } catch (error) {
       dispatch(
         setSnackBar({ message: error.response.data.error, severity: "error" })

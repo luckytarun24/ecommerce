@@ -70,8 +70,8 @@ const Shop = () => {
       <div id="shop-list" style={styles.main}>
         {filterProduct.slice(low, high).map((item) => (
           <CardComponent
-            key={item.id}
-            id={item.id}
+            key={item._id}
+            id={item._id}
             title={item.title}
             image={item.image}
             price={item.price}

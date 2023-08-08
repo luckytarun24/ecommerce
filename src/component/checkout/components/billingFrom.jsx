@@ -1,41 +1,18 @@
-import { Controller, useForm } from "react-hook-form";
+import { Controller } from "react-hook-form";
 
 //Components
 import { Box, TextField, Typography } from "@mui/material";
 
 //Constants
-import { EMAIL, emailRegex } from "../../../utils/constants";
+import { emailRegex } from "../../../utils/constants";
 
 //billingFromStyles
 import { billingFromStyles, styles } from "../utils";
 
-const BillingFrom = () => {
-  //States
-  const {
-    handleSubmit,
-    control,
-    formState: { errors },
-  } = useForm({
-    defaultValues: {
-      firstName: "",
-      lastName: "",
-      country: "",
-      street: "",
-      city: "",
-      state: "",
-      pincode: "",
-      email: "",
-      phoneNo: "",
-    },
-  });
-
-  //Helpers
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+const BillingFrom = ({ control, errors }) => {
   return (
     <Box id="BillingFrom" sx={styles.box}>
-      <form style={billingFromStyles.from} onSubmit={handleSubmit(onSubmit)}>
+      <Box sx={billingFromStyles.from}>
         <Typography variant="h5">Billing Details</Typography>
         <Controller
           name={"firstName"}
@@ -171,8 +148,8 @@ const BillingFrom = () => {
           )}
         />
         <Controller
-          name={EMAIL}
-          id={EMAIL}
+          name={"email"}
+          id={"email"}
           control={control}
           rules={{
             required: "Email is required",
@@ -213,7 +190,7 @@ const BillingFrom = () => {
             />
           )}
         />
-      </form>
+      </Box>
     </Box>
   );
 };

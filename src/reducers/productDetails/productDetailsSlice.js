@@ -26,11 +26,7 @@ export const getProductsReducer = createAsyncThunk(
 const productDetailsSlice = createSlice({
   name: "productDetails",
   initialState: initialState,
-  reducers: {
-    add: (state) => {
-      console.log(state);
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getProductsReducer.fulfilled, (state, { payload }) => {
       state.push(...payload);
@@ -39,6 +35,6 @@ const productDetailsSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { add } = productDetailsSlice.actions;
+// export const { } = productDetailsSlice.actions;
 
 export default productDetailsSlice.reducer;

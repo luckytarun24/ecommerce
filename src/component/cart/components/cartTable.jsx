@@ -1,6 +1,8 @@
+import React, { useEffect, useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+//Components
 import {
-  Box,
-  CardMedia,
   Table,
   TableBody,
   TableCell,
@@ -9,16 +11,14 @@ import {
   TableHead,
   TablePagination,
   TableRow,
-  TextField,
 } from "@mui/material";
-import React from "react";
-import { men } from "../../../assets";
+import CartRow from "./cartRow";
+
+//Styles
 import { cartTableStyle } from "../utils/styles";
-import { useDispatch, useSelector } from "react-redux";
-import { addCountCart, removeFromCart } from "../../../reducers/cart/cartSlice";
-import { setSnackBar } from "../../../reducers/snackBar/snackBar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFloppyDisk, faTrash } from "@fortawesome/free-solid-svg-icons";
+
+//Reducers
+import { getCartReducer } from "../../../reducers/cart/cartSlice";
 
 const CartTable = () => {
   const columns = [
@@ -46,9 +46,10 @@ const CartTable = () => {
 
   //States
   const cartList = useSelector((state) => state.carts.cart);
+  const ref = useRef(true);
+  const products = useSelector((state) => state.products);
 
   const [page, setPage] = React.useState(0);
-  const [count, setCount] = React.useState(0);
 
   const [rowsPerPage, setRowsPerPage] = React.useState(4);
 
@@ -58,26 +59,18 @@ const CartTable = () => {
     setPage(newPage);
   };
 
-  const handleRemove = (id) => {
-    dispatch(removeFromCart({ id }));
-    dispatch(
-      setSnackBar({ message: "Deleted successfully", severity: "error" })
-    );
-  };
-
-  const handleSave = (id) => {
-    dispatch(
-      addCountCart({
-        id: id,
-        count: Number(count),
-      })
-    );
-    dispatch(setSnackBar({ message: "Product added successfully" }));
-  };
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
+
+  //Callbacks
+  useEffect(() => {
+    if (ref.current && products.length > 0) {
+      ref.current = false;
+      dispatch(getCartReducer());
+    }
+  }, [ref, products]);
 
   return (
     <TableContainer sx={cartTableStyle.container}>
@@ -103,40 +96,7 @@ const CartTable = () => {
               )
             : cartList
           ).map((row) => (
-            <TableRow key={row.name}>
-              <TableCell sx={cartTableStyle.imageCell} scope="row">
-                <CardMedia image={men} alt={"no"} sx={cartTableStyle.image} />
-                {row.name}
-              </TableCell>
-              <TableCell sx={cartTableStyle.cell} align="right">
-                {row.price}
-              </TableCell>
-              <TableCell sx={cartTableStyle.cell} align="right">
-                <TextField
-                  sx={cartTableStyle.input}
-                  value={count !== 0 ? count : row.count}
-                  onChange={(event) => setCount(event.target.value)}
-                />
-              </TableCell>
-              <TableCell sx={cartTableStyle.totalCell} align="right">
-                {row.price * row.count}
-              </TableCell>
-              <TableCell sx={cartTableStyle.totalCell} align="right">
-                <Box sx={cartTableStyle.actionCell}>
-                  <FontAwesomeIcon
-                    style={{ cursor: "pointer" }}
-                    onClick={() => handleSave(row.id)}
-                    icon={faFloppyDisk}
-                  />
-
-                  <FontAwesomeIcon
-                    style={{ cursor: "pointer" }}
-                    onClick={() => handleRemove(row.id)}
-                    icon={faTrash}
-                  />
-                </Box>
-              </TableCell>
-            </TableRow>
+            <CartRow key={row.id} row={row} />
           ))}
         </TableBody>
         <TableFooter>
